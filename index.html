@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Forkphorus is a JavaScript compiler for Scratch 3, 2, and 1 projects.">
+  <meta name="description" content="ForkphorusはScratch 3、2、1プロジェクト用のJavaScriptコンパイラです。">
   <link rel="canonical" href="https://forkphorus.github.io/" />
-  <title>forkphorus - phosphorus for Scratch 3</title>
+  <title>forkphorus-jp- forkphorusの日本語版</title>
   <script>
     // Apply local dark mode preference very early to avoid a flash of white
     (function() {
@@ -27,14 +26,14 @@
 <body>
 
   <div class="theme-select">
-    <a class="switch-theme">switch theme</a>
+    <a class="switch-theme">テーマの変更</a>
   </div>
 
   <div id="app">
 
     <div class="area" id="title-area">
-      <h1 class="title">forkphorus</h1>
-      <p>forkphorus runs Scratch 3, 2, and 1 projects really fast by compiling them to JavaScript. Try it out by pasting a project ID or URL into the field below, <a class="upload-button"><input id="upload-file-input" type="file" autocomplete="off" accept=".sb,.sb2,.sb3">selecting a project file</a>, dropping a file on the page, or <a id="examples">exploring the examples studio</a>.</p>
+      <h1 class="title">forkphorus-jp</h1>
+      <p>forkphorus-jpはScratch 3, 2, 1のプロジェクトをJavaScriptにコンパイルして高速に実行します。下のフィールドにプロジェクトIDかURLを貼り付けて試してみてください。<a class="upload-button"><input id="upload-file-input" type="file" autocomplete="off" accept=".sb,.sb2,.sb3">プロジェクトファイルの選択する</a>もしくはページにファイルをドロップするか、<a id="examples">サンプルギャラリーから選ぶ</a></p>
     </div>
 
     <div id="examples-container" class="area">
@@ -50,33 +49,34 @@
     </div>
 
     <div class="area" id="unshared-projects">
-      <h1>Unshared projects are no longer visible</h1>
+      <h1>非共有のプロジェクトは表示されなくなりました</h1>
       <p>
-        Unshared projects are no longer visible due to Scratch API changes.
+        Scratch API のクソ改悪のせいで非共有のプロジェクトは表示されなくなりました。
       </p>
       <p>
-        For more information and workarounds, visit: <a href="https://docs.turbowarp.org/unshared-projects" target="_blank" rel="noopener noreferrer">https://docs.turbowarp.org/unshared-projects</a>
+        詳細はこちらのサイトをご覧ください(英語):<a href="https://docs.turbowarp.org/unshared-projects" target="_blank" rel="noopener noreferrer">https://docs.turbowarp.org/unshared-projects</a>
       </p>
     </div>
 
     <div class="area" id="project-area">
 
       <section>
-        <h1 data-i18n="index.report">Report a problem</h1>
-        <p>forkphorus is still in development. <a id="bug-link" target="_blank" rel="noopener" href="https://github.com/forkphorus/forkphorus/issues/new">Click here</a> to report a problem with this project. You can also comment problems <a href="https://scratch.mit.edu/projects/366001364/" target="_blank" rel="noopener">here</a> if you don't have a GitHub account.</p>
+        <h1 data-i18n="index.report">フィードバック</h1>
+        <p>forkphorus-jpは現在も開発中です。
+        このプロジェクトのフィードバックを送信したい場合は<a id="bug-link" target="_blank" rel="noopener" href="https://github.com/forkphorus/forkphorus/issues/new">GitHub</a>または</p><a href="https://scratch.mit.edu/projects/366001364/" target="_blank" rel="noopener">Scratch</a><p>からどうぞ</p>
       </section>
 
       <section class=package>
-        <h1 data-i18n="index.embed">Embed this project</h1>
-        <p data-i18n="index.embed.description">Include the forkphorus player in your web site.</p>
+        <h1 data-i18n="index.embed">埋め込みコード</h1>
+        <p data-i18n="index.embed.description">自分のウェブサイトに埋め込めみ可能なプレイヤー</p>
         <p class="embed-options">
           <input readonly id="embed-code">
           <input type="checkbox" id="embed-auto-start" checked>
-          <label for="embed-auto-start" data-i18n="index.embed.autostart">Start automatically</label>
+          <label for="embed-auto-start" data-i18n="index.embed.autostart">オートスタート</label>
           <input type="checkbox" id="embed-light-content">
-          <label for="embed-light-content" data-i18n="index.embed.lightControls">Light controls</label>
+          <label for="embed-light-content" data-i18n="index.embed.lightControls">簡易コントロール</label>
           <input type="checkbox" id="embed-hide-controls">
-          <label for="embed-hide-controls" data-i18n="index.embed.hideUI">Hide UI</label>
+          <label for="embed-hide-controls" data-i18n="index.embed.hideUI">GUIの非表示</label>
           <span>
             <!-- we re-use the i18n for the packager for this -->
             <input type="radio" name="embed-resolution" id="embed-480" checked>
@@ -91,14 +91,14 @@
       </section>
 
       <section class=package>
-        <h1 data-i18n="index.package">Package this project</h1>
-        <p>Get a link to a web page that automatically runs your project. To package to HTML, EXE, APK, or other formats, use the <a href="packager/" id="html-packager">HTML packager</a>.</p>
+        <h1 data-i18n="index.package">プロジェクトをパッケージ化する</h1>
+        <p>プロジェクトを自動的に実行するウェブページへのリンクを取得します。HTML、EXE、APK、その他の形式にパッケージするには <a href="packager/" id="html-packager">HTMLパッケージャ</a>を使ってください。</p>
         <p class="package-options">
-          <a href="#" target="_blank" id="package-link" data-i18n="index.package.button">Package</a>
+          <a href="#" target="_blank" id="package-link" data-i18n="index.package.button">パッケージ化</a>
           <input type="checkbox" id="package-turbo">
-          <label for="package-turbo" data-i18n="index.package.turbo">Turbo mode</label>
+          <label for="package-turbo" data-i18n="index.package.turbo">ターボモード</label>
           <input type="checkbox" id="package-controls">
-          <label for="package-controls" data-i18n="index.package.controls">Controls</label>
+          <label for="package-controls" data-i18n="index.package.controls">コントロール</label>
           <span>
             <input type="radio" name="package-resolution" id="package-full-screen" checked>
             <label for="package-full-screen" data-i18n="index.package.fullscreen">Full screen</label>
@@ -115,50 +115,47 @@
         </p>
       </section>
 
-      <h1 data-i18n="index.settings">Settings</h1>
+      <h1 data-i18n="index.settings">実行設定</h1>
       <table id="settings">
         <tr>
-          <td class="name" title="Forkphorus will **attempt** to run at this framerate."><label for="settings-fps">Framerate (FPS)</label></td>
+          <td class="name" title="Forkphorus will **attempt** to run at this framerate."><label for="settings-fps">フレームレート(FPS)</label></td>
           <td class="value"><input id="settings-fps" value="0" placeholder="30" type="number" step="any" min="0" required autocomplete="off"></td>
         </tr>
         <tr>
-          <td class="name" title="The value of the &quot;username&quot; block. Changing this may cause issues in some projects."><label for="settings-username">Username</label></td>
+          <td class="name" title="The value of the &quot;username&quot; block. Changing this may cause issues in some projects."><label for="settings-username">ユーザー名</label></td>
           <td class="value"><input id="settings-username" type="text" placeholder="(nothing)" autocomplete="off"></td>
         </tr>
         <tr>
-          <td class="name" title="Controls whether the renderer tries to make images look smoother."><label for="settings-image-smoothing">Image Smoothing</label></td>
+          <td class="name" title="Controls whether the renderer tries to make images look smoother."><label for="settings-image-smoothing">イメージスムージング</label></td>
           <td class="value"><input id="settings-image-smoothing" type="checkbox" autocomplete="off"></td>
         </tr>
         <tr>
-          <td class="name" title="Prevents sprites from moving offscreen."><label for="settings-sprite-fencing">Sprite Fencing</label></td>
+          <td class="name" title="Prevents sprites from moving offscreen."><label for="settings-sprite-fencing">スプライト・フェンシング</label></td>
           <td class="value"><input id="settings-sprite-fencing" type="checkbox" autocomplete="off"></td>
         </tr>
         <tr>
-          <td class="name" title="Removes some limits."><label for="settings-remove-limits">Remove some limits</label></td>
+          <td class="name" title="Removes some limits."><label for="settings-remove-limits">いくつかの制限を無効化</label></td>
           <td class="value"><input id="settings-remove-limits" type="checkbox" autocomplete="off"></td>
         </tr>
       </table>
-      <p>Changes are applied automatically.</p>
+      <p>変更は勝手に適用されます</p>
 
-      <h1 data-i18n="index.advanced">Advanced Settings</h1>
-      <p>Help test unfinished features. These require a refresh to apply.</b> <a href="https://github.com/forkphorus/forkphorus/wiki/Advanced-Features" target="_blank">Please read this first</a>.</p>
+      <h1 data-i18n="index.advanced">詳細設定</h1>
+      <p>未完成の機能をテストするのに役立ちます。これらを適用するには更新が必要です。</b> <a href="https://github.com/forkphorus/forkphorus/wiki/Advanced-Features" target="_blank">最初にお読みください</a>.</p>
       <div class="advanced">
-        <label><input id="advanced-webgl" class="advanced-feature" type="checkbox"> WebGL Renderer</label>
+        <label><input id="advanced-webgl" class="advanced-feature" type="checkbox"> WebGL レンダラー</label>
       </div>
     </div>
 
     <section>
-      <h1>Try out TurboWarp</h1>
-      <p style="margin-bottom: 0;"><a id="turbowarp" href="https://turbowarp.org/" target="_black" rel="noopener">TurboWarp</a> typically has better performance and compatibility than forkphorus and has an editor. Give it a try, you might like it.</p>
-
       <h1 data-i18n="index.credits">Credits</h1>
-      <p>forkphorus is maintained by <a href="https://scratch.mit.edu/users/GarboMuffin/">GarboMuffin</a> and <a href="https://github.com/forkphorus/forkphorus/graphs/contributors">other contributors</a>. It is a fork of <a href="https://github.com/nathan">Nathan</a>'s <a href="https://phosphorus.github.io/">phosphorus</a>. Its CPS-style compilation was inspired by <a href="https://github.com/RHY3756547">Rhys</a>'s <a href="https://code.google.com/p/sb2-js/">sb2.js</a>. The <a href="https://stuk.github.io/jszip/">JSZip</a> library is used to read <code>.sb2</code> and <code>.sb3</code> files. The <a href="https://github.com/canvg/canvg">canvg</a> library is used to render SVGs for Scratch 2 projects. The <a href="https://github.com/LLK/scratch-sb1-converter">scratch-sb1-converter</a> library is used to support Scratch 1 projects.</p>
+      <p>forkphorus-jp is maintained by <a href="https://scratch.mit.edu/users/GarboMuffin/">GarboMuffin</a> and <a href="https://github.com/forkphorus/forkphorus/graphs/contributors">other contributors</a>. It is a fork of <a href="https://github.com/nathan">Nathan</a>'s <a href="https://phosphorus.github.io/">phosphorus</a>. Its CPS-style compilation was inspired by <a href="https://github.com/RHY3756547">Rhys</a>'s <a href="https://code.google.com/p/sb2-js/">sb2.js</a>. The <a href="https://stuk.github.io/jszip/">JSZip</a> library is used to read <code>.sb2</code> and <code>.sb3</code> files. The <a href="https://github.com/canvg/canvg">canvg</a> library is used to render SVGs for Scratch 2 projects. The <a href="https://github.com/LLK/scratch-sb1-converter">scratch-sb1-converter</a> library is used to support Scratch 1 projects.</p>
 
-      <h1 data-i18n="index.code">Code</h1>
-      <p>The source code for forkphorus is available <a href=https://github.com/forkphorus/forkphorus>on GitHub</a>.</p>
+      <h1 data-i18n="index.code">コード</h1>
+      <p>ソースコードは<a href=https://github.com/forkphorus/forkphorus>GitHub</a>から入手できます</p>
 
       <footer>
-        <a data-i18n="index.privacy" href="privacy">Privacy Policy</a>
+        <a data-i18n="index.privacy" href="privacy">プライバシーポリシー</a>
       </footer>
     </section>
 
@@ -230,7 +227,8 @@
 
     /** Constants **/
     var PROJECT_PREFIX = 'https://scratch.mit.edu/projects/';
-    var STUDIO = '15926401';
+    /**自分用:スタジオidの設定　下の数字がスタジオ**/
+    var STUDIO = '32595012';
 
     /** Core Player Logic **/
     var titleArea = querySelector('#title-area');
