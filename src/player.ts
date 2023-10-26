@@ -1194,10 +1194,10 @@ namespace P.player {
   export class ErrorHandler {
     /**
      * The URL to report bugs to.
-     * $title is replaced with the project title (encoded)
-     * $body is replaced with the bug report body (encoded)
+     * $title is replaced with the project title (URI encoded)
+     * $body is replaced with the bug report body (URI encoded)
      */
-    public static BUG_REPORT_LINK = 'https://github.com/forkphorus/forkphorus/issues/new?template=bug_report.md&labels=bug&title=$title&body=$body&';
+    public static BUG_REPORT_LINK = 'https://forkphorus.github.io/bug_report.html?title=$title&body=$body';
 
     private errorEl: HTMLElement | null = null;
     private errorContainer: HTMLElement | null = null;
@@ -1328,8 +1328,8 @@ namespace P.player {
       const el = document.createElement('div');
       const errorLink = this.createBugReportLink(error);
       this.generatedErrorLink = errorLink;
-      const attributes = 'href="' + errorLink + '" target="_blank" ref="noopener"';
-      // use of innerHTML intentional
+      const attributes = 'href="' + P.utils.escapeXML(errorLink) + '" target="_blank" ref="noopener"';
+      // use of innerHTML is intentional and is safe
       el.innerHTML = P.i18n.translate('player.errorhandler.error').replace('$attrs', attributes);
       return el;
     }
