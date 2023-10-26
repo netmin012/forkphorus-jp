@@ -1,6 +1,6 @@
-# forkphorus
+# forkphorus-jp
 
-[forkphorus.github.io](https://forkphorus.github.io)
+[forkphorus.github.io](https://netmin012.github.io/forkphorus-jp/)
 
 A JavaScript/TypeScript compiler for Scratch 3, 2, and 1 projects. forkphorus is a *fork* of [phos*phorus*](https://phosphorus.github.io/).
 
